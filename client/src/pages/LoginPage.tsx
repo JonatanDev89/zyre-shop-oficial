@@ -65,7 +65,7 @@ export default function LoginPage() {
     <div
       className="min-h-screen flex items-center justify-center p-4"
       style={{
-        background: "linear-gradient(135deg, oklch(0.10 0.02 240) 0%, oklch(0.14 0.04 200) 50%, oklch(0.10 0.03 145) 100%)",
+        background: "linear-gradient(135deg, oklch(0.10 0.02 19) 0%, oklch(0.14 0.04 25) 50%, oklch(0.10 0.03 15) 100%)",
       }}
     >
       {/* Grid decorativo */}
@@ -73,7 +73,7 @@ export default function LoginPage() {
         className="fixed inset-0 opacity-5 pointer-events-none"
         style={{
           backgroundImage:
-            "linear-gradient(oklch(0.65 0.22 145) 1px, transparent 1px), linear-gradient(90deg, oklch(0.65 0.22 145) 1px, transparent 1px)",
+            "linear-gradient(oklch(0.6602 0.2293 35.4) 1px, transparent 1px), linear-gradient(90deg, oklch(0.6602 0.2293 35.4) 1px, transparent 1px)",
           backgroundSize: "40px 40px",
         }}
       />
@@ -84,9 +84,9 @@ export default function LoginPage() {
           <Link href="/">
             <div className="flex items-center gap-3 cursor-pointer">
               {logoUrl ? (
-                <img src={logoUrl} alt={storeName} className="h-12 w-12 object-contain rounded-xl shadow-lg" style={{ boxShadow: "0 0 24px oklch(0.65 0.22 200 / 0.4)" }} />
+                <img src={logoUrl} alt={storeName} className="h-12 w-12 object-contain rounded-xl shadow-lg" style={{ boxShadow: "0 0 24px oklch(0.6602 0.2293 35.4 / 0.4)" }} />
               ) : (
-                <div className="h-12 w-12 rounded-xl bg-primary flex items-center justify-center shadow-lg" style={{ boxShadow: "0 0 24px oklch(0.65 0.22 200 / 0.4)" }}>
+                <div className="h-12 w-12 rounded-xl bg-primary flex items-center justify-center shadow-lg" style={{ boxShadow: "0 0 24px oklch(0.6602 0.2293 35.4 / 0.4)" }}>
                   <Sword className="h-6 w-6 text-primary-foreground" />
                 </div>
               )}

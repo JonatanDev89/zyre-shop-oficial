@@ -15,8 +15,8 @@ import { toast } from "sonner";
 
 // ─── Presets ──────────────────────────────────────────────────────────────────
 const THEME_PRESETS = [
-  { name: "Zyre MC",   primaryColor: "#00c8c8", backgroundColor: "#1a1f2e", cardColor: "#222840", glowColor: "#00c8c8", borderRadius: "0.5rem" },
-  { name: "Fogo",     primaryColor: "#ff4500", backgroundColor: "#1a0f0f", cardColor: "#2a1515", glowColor: "#ff4500", borderRadius: "0.5rem" },
+  { name: "Zyre MC",   primaryColor: "#ff4500", backgroundColor: "#1a0f0f", cardColor: "#2a1515", glowColor: "#ff4500", borderRadius: "0.5rem" },
+  { name: "Ciano",     primaryColor: "#00c8c8", backgroundColor: "#1a1f2e", cardColor: "#222840", glowColor: "#00c8c8", borderRadius: "0.5rem" },
   { name: "Floresta", primaryColor: "#22c55e", backgroundColor: "#0f1a12", cardColor: "#152218", glowColor: "#22c55e", borderRadius: "0.5rem" },
   { name: "Roxo",     primaryColor: "#a855f7", backgroundColor: "#130f1a", cardColor: "#1e1528", glowColor: "#a855f7", borderRadius: "0.5rem" },
   { name: "Dourado",  primaryColor: "#f59e0b", backgroundColor: "#1a1500", cardColor: "#261e00", glowColor: "#f59e0b", borderRadius: "0.5rem" },
@@ -96,11 +96,11 @@ function getLuminance(hex: string) {
 }
 function getContrastColor(hex: string) { return getLuminance(hex)>0.179?"#000000":"#ffffff"; }
 function deriveCardColor(bgHex: string) {
-  const hsl=hexToHsl(bgHex); if(!hsl) return "#222840";
+  const hsl=hexToHsl(bgHex); if(!hsl) return "#2a1515";
   return hslToHex(hsl.h,Math.min(hsl.s+5,100),Math.min(hsl.l+4,95));
 }
 function deriveBgColor(primaryHex: string) {
-  const hsl=hexToHsl(primaryHex); if(!hsl) return "#1a1f2e";
+  const hsl=hexToHsl(primaryHex); if(!hsl) return "#1a0f0f";
   return hslToHex(hsl.h,Math.min(hsl.s*0.3,40),10);
 }
 
@@ -291,10 +291,10 @@ export default function AdminCustomization() {
   const [discordTicketsUrl, setDiscordTicketsUrl] = useState("");
 
   // Tema
-  const [primaryColor, setPrimaryColor] = useState("#00c8c8");
-  const [backgroundColor, setBackgroundColor] = useState("#1a1f2e");
-  const [cardColor, setCardColor] = useState("#222840");
-  const [glowColor, setGlowColor] = useState("#00c8c8");
+  const [primaryColor, setPrimaryColor] = useState("#ff4500");
+  const [backgroundColor, setBackgroundColor] = useState("#1a0f0f");
+  const [cardColor, setCardColor] = useState("#2a1515");
+  const [glowColor, setGlowColor] = useState("#ff4500");
   const [priceColor, setPriceColor] = useState("#f97316");
   const [glowIntensity, setGlowIntensity] = useState("0.4");
   const [borderRadius, setBorderRadius] = useState("0.5rem");
@@ -328,10 +328,10 @@ export default function AdminCustomization() {
     setWardenGifUrl(settings.wardenGifUrl ?? "");
     setAnnouncementText(settings.announcementText ?? "");
     setAnnouncementCoupon(settings.announcementCoupon ?? "");
-    setPrimaryColor(settings.primaryColor ?? "#00c8c8");
-    setBackgroundColor(settings.backgroundColor ?? "#1a1f2e");
-    setCardColor(settings.cardColor ?? "#222840");
-    setGlowColor(settings.glowColor ?? "#00c8c8");
+    setPrimaryColor(settings.primaryColor ?? "#ff4500");
+    setBackgroundColor(settings.backgroundColor ?? "#1a0f0f");
+    setCardColor(settings.cardColor ?? "#2a1515");
+    setGlowColor(settings.glowColor ?? "#ff4500");
     setPriceColor(settings.priceColor ?? "#f97316");
     setGlowIntensity(settings.glowIntensity ?? "0.4");
     setBorderRadius(settings.borderRadius ?? "0.5rem");

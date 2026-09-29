@@ -9,7 +9,7 @@ export default function MaintenancePage() {
   const discordUrl = settings?.discordUrl || "#";
 
   return (
-    <div className="min-h-screen bg-[#1a1f2e] flex items-center justify-center p-6 text-center">
+    <div className="min-h-screen bg-[#1a0f0f] flex items-center justify-center p-6 text-center">
       <div className="max-w-md w-full space-y-8">
         <div className="relative">
           <div className="absolute inset-0 flex items-center justify-center opacity-10">

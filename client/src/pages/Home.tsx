@@ -63,7 +63,7 @@ export default function Home() {
           style={{
             background: heroBgUrl
               ? "linear-gradient(135deg, rgba(10,14,20,0.92) 0%, rgba(10,14,20,0.7) 100%)"
-              : "linear-gradient(135deg, oklch(0.10 0.02 240) 0%, oklch(0.14 0.04 200) 50%, oklch(0.10 0.03 145) 100%)",
+              : "linear-gradient(135deg, oklch(0.10 0.02 19) 0%, oklch(0.14 0.04 25) 50%, oklch(0.10 0.03 15) 100%)",
           }}
         />
         {/* Decorative grid */}
@@ -71,7 +71,7 @@ export default function Home() {
           className="absolute inset-0 opacity-5"
           style={{
             backgroundImage:
-              "linear-gradient(oklch(0.65 0.22 145) 1px, transparent 1px), linear-gradient(90deg, oklch(0.65 0.22 145) 1px, transparent 1px)",
+              "linear-gradient(oklch(0.6602 0.2293 35.4) 1px, transparent 1px), linear-gradient(90deg, oklch(0.6602 0.2293 35.4) 1px, transparent 1px)",
             backgroundSize: "40px 40px",
           }}
         />
@@ -97,7 +97,7 @@ export default function Home() {
             <div className="lg:hidden flex items-center gap-4 mb-6">
               <div className="flex flex-col gap-3 flex-1">
                 <Link href="/loja">
-                  <Button size="lg" className="gap-2 font-semibold w-full" style={{ boxShadow: "0 0 20px oklch(0.65 0.22 200 / 0.4)" }}>
+                  <Button size="lg" className="gap-2 font-semibold w-full" style={{ boxShadow: "0 0 20px oklch(0.6602 0.2293 35.4 / 0.4)" }}>
                     <Sword className="h-5 w-5" />
                     Ver Produtos
                   </Button>
@@ -121,7 +121,7 @@ export default function Home() {
             {/* Desktop: botões lado a lado */}
             <div className="hidden lg:flex flex-wrap gap-3">
               <Link href="/loja">
-                <Button size="lg" className="gap-2 font-semibold" style={{ boxShadow: "0 0 20px oklch(0.65 0.22 200 / 0.4)" }}>
+                <Button size="lg" className="gap-2 font-semibold" style={{ boxShadow: "0 0 20px oklch(0.6602 0.2293 35.4 / 0.4)" }}>
                   <Sword className="h-5 w-5" />
                   Ver Produtos
                 </Button>

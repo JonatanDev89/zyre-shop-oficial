@@ -20,7 +20,7 @@ export default function CategoryCard({
   link = `/categoria/${id}`,
 }: CategoryCardProps) {
   const { data: settings } = trpc.shop.getSettings.useQuery();
-  const [glowColor, setGlowColor] = useState("rgb(0, 200, 200)"); // Default cyan
+  const [glowColor, setGlowColor] = useState("rgb(255, 69, 0)"); // Default Zyre MC orange
   const imgRef = useRef<HTMLImageElement>(null);
 
   // Parse hex color to RGB
@@ -29,11 +29,11 @@ export default function CategoryCard({
     if (result) {
       return `rgb(${parseInt(result[1], 16)}, ${parseInt(result[2], 16)}, ${parseInt(result[3], 16)})`;
     }
-    return "rgb(0, 200, 200)";
+    return "rgb(255, 69, 0)";
   };
 
   // Get fallback glow color from settings
-  const fallbackGlowColor = settings?.glowColor ? hexToRgb(settings.glowColor) : "rgb(0, 200, 200)";
+  const fallbackGlowColor = settings?.glowColor ? hexToRgb(settings.glowColor) : "rgb(255, 69, 0)";
 
   useEffect(() => {
     if (!imgRef.current) return;
