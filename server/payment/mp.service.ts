@@ -188,7 +188,7 @@ export async function createPreference(
     },
     auto_return: "approved" as const,
     notification_url: `${baseUrl}/api/mp/webhook`,
-    statement_descriptor: "WARDEN SHOP",
+    statement_descriptor: "ZYRE MC",
     // Garantir que PIX (bank_transfer) está habilitado explicitamente
     payment_methods: {
       excluded_payment_types: [] as { id: string }[],
@@ -280,7 +280,7 @@ export async function createPixPayment(
 
   const body: any = {
     transaction_amount: Math.round(input.expectedTotal * 100) / 100,
-    description: `Pedido ${input.orderNumber} - Warden Shop`,
+    description: `Pedido ${input.orderNumber} - Zyre MC`,
     payment_method_id: "pix",
     external_reference: input.orderNumber,
     notification_url: `${baseUrl}/api/mp/webhook`,
@@ -288,7 +288,7 @@ export async function createPixPayment(
     payer: {
       email: input.payerEmail,
       first_name: input.payerFirstName || "Cliente",
-      last_name: input.payerLastName || "Warden",
+      last_name: input.payerLastName || "Zyre MC",
       identification: input.payerCpf
         ? { type: "CPF", number: input.payerCpf.replace(/\D/g, "") }
         : undefined,

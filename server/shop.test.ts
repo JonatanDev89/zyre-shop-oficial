@@ -68,7 +68,7 @@ vi.mock("./db", () => ({
   createOrder: vi.fn().mockResolvedValue({ id: 1, orderNumber: "WS-001" }),
   createOrderItems: vi.fn().mockResolvedValue(undefined),
   incrementCouponUsage: vi.fn().mockResolvedValue(undefined),
-  getSiteSettings: vi.fn().mockResolvedValue({ storeName: "Warden Shop" }),
+  getSiteSettings: vi.fn().mockResolvedValue({ storeName: "Zyre MC" }),
   getUserByEmail: vi.fn(),
   getAllAdmins: vi.fn().mockResolvedValue([]),
   setUserRole: vi.fn().mockResolvedValue(undefined),

@@ -108,7 +108,7 @@ export async function initiatePixPayment(
   const expectedTotal = parseFloat(String(order.total));
   const nameParts = payerName.trim().split(" ");
   const firstName = nameParts[0] ?? "Cliente";
-  const lastName = nameParts.slice(1).join(" ") || "Warden";
+  const lastName = nameParts.slice(1).join(" ") || "Zyre MC";
 
   const result = await createPixPayment({
     orderNumber,
