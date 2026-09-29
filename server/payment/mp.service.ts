@@ -33,6 +33,32 @@ function redact(obj: Record<string, unknown>): Record<string, unknown> {
   return out;
 }
 
+/** Extrai uma mensagem útil dos erros aninhados retornados pelo SDK do MP. */
+function mpErrorMessage(error: unknown): string {
+  if (typeof error === "string" && error.trim()) return error;
+  if (!error || typeof error !== "object") return "Erro desconhecido do Mercado Pago.";
+
+  const value = error as Record<string, unknown>;
+  const causes = value.cause;
+  if (Array.isArray(causes)) {
+    const descriptions = causes
+      .map(c => (c && typeof c === "object" ? (c as Record<string, unknown>).description ?? (c as Record<string, unknown>).message : c))
+      .filter(v => typeof v === "string" && v.trim()) as string[];
+    if (descriptions.length) return descriptions.join("; ");
+  }
+
+  for (const key of ["message", "description", "error", "detail"]) {
+    const candidate = value[key];
+    if (typeof candidate === "string" && candidate.trim()) return candidate;
+  }
+
+  try {
+    return JSON.stringify(error).slice(0, 500);
+  } catch {
+    return "Erro desconhecido do Mercado Pago.";
+  }
+}
+
 // ─── Hierarquia de status ─────────────────────────────────────────────────────
 export type PaymentStatus =
   | "pending"
@@ -217,10 +243,10 @@ export async function createPreference(
     log.error("mp.preference.api_error", {
       orderNumber: input.orderNumber,
       status: mpError?.status ?? mpError?.statusCode ?? "unknown",
-      message: mpError?.message ?? String(err),
+      message: mpErrorMessage(mpError),
       detail: JSON.stringify(mpError?.data ?? mpError?.body ?? mpError).slice(0, 500),
     });
-    throw new Error(`Mercado Pago recusou a preferência: ${mpError?.message ?? String(err)}`);
+    throw new Error(`Mercado Pago recusou a preferência: ${mpErrorMessage(mpError)}`);
   }
 
   log.info("mp.preference.response", {
@@ -308,10 +334,10 @@ export async function createPixPayment(
     log.error("mp.pix.api_error", {
       orderNumber: input.orderNumber,
       status: mpError?.status ?? "unknown",
-      message: mpError?.message ?? String(err),
+      message: mpErrorMessage(mpError),
       detail: JSON.stringify(mpError?.data ?? mpError?.body ?? mpError).slice(0, 500),
     });
-    throw new Error(`Erro ao gerar PIX: ${mpError?.message ?? String(err)}`);
+    throw new Error(`Erro ao gerar PIX: ${mpErrorMessage(mpError)}`);
   }
 
   const qrCode = result?.point_of_interaction?.transaction_data?.qr_code;
