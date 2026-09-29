@@ -29,7 +29,7 @@ export default function Home() {
   const isAdmin = user?.role === "admin";
 
   const s = settings as Record<string, string> | undefined;
-  const heroTitle = s?.heroTitle ?? "A Loja Oficial do Warden Craft";
+  const heroTitle = s?.heroTitle ?? "A Loja Oficial do Zyre MC";
   const heroSubtitle =
     s?.heroSubtitle ??
     "Adquira kits, ranks e itens exclusivos para o servidor. Entrega automática direto no seu jogo!";
@@ -113,7 +113,7 @@ export default function Home() {
               </div>
               <img
                 src={wardenGifUrl}
-                alt="Warden Minecraft"
+                alt="Zyre MC"
                 className="w-32 h-32 object-contain drop-shadow-2xl shrink-0"
               />
             </div>
@@ -140,7 +140,7 @@ export default function Home() {
             <div className="hidden lg:flex items-center justify-center">
               <img
                 src={wardenGifUrl}
-                alt="Warden Minecraft"
+                alt="Zyre MC"
                 className="w-full max-w-sm drop-shadow-2xl"
               />
             </div>
@@ -349,7 +349,7 @@ export default function Home() {
             {[
               {
                 q: "Como recebo meu item após o pagamento?",
-                a: "Após o PIX ser confirmado, entre no servidor Warden Craft e use o comando !resgatar no chat. Uma janela vai abrir mostrando seus pedidos pendentes — selecione o pedido e clique em Resgatar para receber os itens.",
+                a: "Após o PIX ser confirmado, entre no servidor Zyre MC e use o comando !resgatar no chat. Uma janela vai abrir mostrando seus pedidos pendentes — selecione o pedido e clique em Resgatar para receber os itens.",
               },
               {
                 q: "O que acontece ao usar !resgatar?",

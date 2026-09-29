@@ -36,7 +36,7 @@ export default function LoginPage() {
   const utils = trpc.useUtils();
   const { data: settings } = trpc.shop.getSettings.useQuery();
   const logoUrl = settings?.logoUrl ?? "";
-  const storeName = settings?.storeName ?? "Warden Shop";
+  const storeName = settings?.storeName ?? "Zyre MC";
 
   const loginForm = useForm<LoginForm>({ resolver: zodResolver(loginSchema) });
   const registerForm = useForm<RegisterForm>({ resolver: zodResolver(registerSchema) });

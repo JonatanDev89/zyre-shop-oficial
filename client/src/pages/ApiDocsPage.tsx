@@ -122,7 +122,7 @@ export default function ApiDocsPage() {
               </h1>
             </div>
             <p className="text-lg text-muted-foreground">
-              Integre a Warden Shop com seu servidor Minecraft Bedrock via tRPC API.
+              Integre a Zyre MC com seu servidor Minecraft Bedrock via tRPC API.
             </p>
           </div>
 
@@ -358,7 +358,7 @@ const response = await fetch(
   '\${baseUrl}/addon.health',
   {
     headers: {
-      'Authorization': 'Bearer warden_xxxxx...'
+      'Authorization': 'Bearer wsk_xxxxx...'
     }
   }
 );
@@ -386,7 +386,7 @@ const response = await fetch(
   '\${baseUrl}/addon.getPendingOrders',
   {
     headers: {
-      'Authorization': 'Bearer warden_xxxxx...'
+      'Authorization': 'Bearer wsk_xxxxx...'
     }
   }
 );
@@ -417,7 +417,7 @@ const response = await fetch(
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer warden_xxxxx...'
+      'Authorization': 'Bearer wsk_xxxxx...'
     },
     body: JSON.stringify({ orderId: 123 })
   }

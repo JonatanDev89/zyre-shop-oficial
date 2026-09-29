@@ -116,7 +116,7 @@ function SetupGuide() {
                 <div className="h-6 w-6 rounded-full bg-blue-500/20 flex items-center justify-center shrink-0 text-blue-400 font-bold text-xs">3</div>
                 <div className="flex-1">
                   <p className="font-medium text-foreground mb-1">Configure o webhook</p>
-                  <p className="text-muted-foreground text-xs mb-2">Escolha um nome (ex: "Warden Shop") e o canal onde as mensagens serão enviadas</p>
+                  <p className="text-muted-foreground text-xs mb-2">Escolha um nome (ex: "Zyre MC") e o canal onde as mensagens serão enviadas</p>
                 </div>
               </div>
 
@@ -151,7 +151,7 @@ function DiscordPreview({ message, eventKey }: { message: string; eventKey: stri
         <div className="h-10 w-10 rounded-full bg-[#5865F2] flex items-center justify-center shrink-0 text-white font-bold text-sm">W</div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 mb-1">
-            <span className="text-white font-semibold text-sm">Warden Shop</span>
+            <span className="text-white font-semibold text-sm">Zyre MC</span>
             <span className="text-[10px] bg-[#5865F2] text-white px-1 rounded font-medium">BOT</span>
             <span className="text-[#949BA4] text-xs">Hoje às {new Date().toLocaleTimeString("pt-BR", { hour: "2-digit", minute: "2-digit" })}</span>
           </div>
@@ -215,7 +215,7 @@ function WebhookForm({ webhook, onClose }: { webhook?: any; onClose: () => void 
       const testMessage = {
         embeds: [{
           title: "🧪 Teste de Webhook",
-          description: "Este é um teste de conexão do Warden Shop!\n\nSe você está vendo esta mensagem, o webhook está funcionando corretamente. ✅",
+          description: "Este é um teste de conexão do Zyre MC!\n\nSe você está vendo esta mensagem, o webhook está funcionando corretamente. ✅",
           color: 0x5865F2,
           fields: [
             { name: "Status", value: "Conectado", inline: true },

@@ -7,9 +7,9 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* About */}
           <div>
-            <h3 className="font-bold text-lg mb-4">Warden Shop</h3>
+            <h3 className="font-bold text-lg mb-4">Zyre MC</h3>
             <p className="text-sm text-muted-foreground">
-              A loja oficial do servidor Warden Craft. Adquira kits, itens e benefícios exclusivos.
+              A loja oficial do servidor Zyre MC. Adquira kits, itens e benefícios exclusivos.
             </p>
           </div>
 
@@ -39,15 +39,15 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-4">Suporte</h3>
             <p className="text-sm text-muted-foreground">
-              Precisa de ajuda? Entre em contato pelo Discord do servidor Warden Craft.
+              Precisa de ajuda? Entre em contato pelo Discord do servidor Zyre MC.
             </p>
           </div>
         </div>
 
         {/* Bottom */}
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-muted-foreground">
-          <p>&copy; 2026 Warden Shop. Todos os direitos reservados.</p>
-          <p>Warden Shop não é afiliado à Mojang Studios ou Microsoft.</p>
+          <p>&copy; 2026 Zyre MC. Todos os direitos reservados.</p>
+          <p>Zyre MC não é afiliado à Mojang Studios ou Microsoft.</p>
         </div>
       </div>
     </footer>

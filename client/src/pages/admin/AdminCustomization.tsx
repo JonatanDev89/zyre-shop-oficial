@@ -15,7 +15,7 @@ import { toast } from "sonner";
 
 // ─── Presets ──────────────────────────────────────────────────────────────────
 const THEME_PRESETS = [
-  { name: "Warden",   primaryColor: "#00c8c8", backgroundColor: "#1a1f2e", cardColor: "#222840", glowColor: "#00c8c8", borderRadius: "0.5rem" },
+  { name: "Zyre MC",   primaryColor: "#00c8c8", backgroundColor: "#1a1f2e", cardColor: "#222840", glowColor: "#00c8c8", borderRadius: "0.5rem" },
   { name: "Fogo",     primaryColor: "#ff4500", backgroundColor: "#1a0f0f", cardColor: "#2a1515", glowColor: "#ff4500", borderRadius: "0.5rem" },
   { name: "Floresta", primaryColor: "#22c55e", backgroundColor: "#0f1a12", cardColor: "#152218", glowColor: "#22c55e", borderRadius: "0.5rem" },
   { name: "Roxo",     primaryColor: "#a855f7", backgroundColor: "#130f1a", cardColor: "#1e1528", glowColor: "#a855f7", borderRadius: "0.5rem" },
@@ -173,7 +173,7 @@ function ThemePreview({ primaryColor, backgroundColor, cardColor, glowColor }: {
       <div className="flex items-center justify-between px-3 py-2 border-b" style={{ backgroundColor: cardColor, borderColor: primaryColor+"33" }}>
         <div className="flex items-center gap-1.5">
           <div className="w-5 h-5 rounded-full" style={{ backgroundColor: primaryColor }} />
-          <span className="font-bold" style={{ color: cc }}>Warden Shop</span>
+          <span className="font-bold" style={{ color: cc }}>Zyre MC</span>
         </div>
         <div className="px-2 py-0.5 rounded text-[10px] font-medium" style={{ backgroundColor: primaryColor, color: pc }}>Entrar</div>
       </div>

@@ -21,7 +21,7 @@ export default function ShopLayout({ children }: ShopLayoutProps) {
   const [, navigate] = useLocation();
 
   const s = settings as Record<string, string> | undefined;
-  const storeName = s?.storeName ?? "Warden Shop";
+  const storeName = s?.storeName ?? "Zyre MC";
   const announcementText = s?.announcementText ?? "";
   const announcementCoupon = s?.announcementCoupon ?? "";
   const logoUrl = s?.logoUrl ?? "";
@@ -346,7 +346,7 @@ export default function ShopLayout({ children }: ShopLayoutProps) {
                 )}
                 <span className="font-bold text-foreground" style={{ fontFamily: "'Space Grotesk', sans-serif" }}>{storeName}</span>
               </div>
-              <p className="text-sm text-muted-foreground">{s?.storeDescription ?? "A loja oficial do servidor Warden Craft."}</p>
+              <p className="text-sm text-muted-foreground">{s?.storeDescription ?? "A loja oficial do servidor Zyre MC."}</p>
             </div>
             <div>
               <h4 className="font-semibold text-foreground mb-3">Navegação</h4>

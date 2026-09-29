@@ -56,7 +56,7 @@ export default function MaintenancePage() {
         
         <div className="pt-12">
           <p className="text-slate-600 text-xs font-mono uppercase tracking-widest">
-            {settings?.storeName || "Warden Shop"} &copy; {new Date().getFullYear()}
+            {settings?.storeName || "Zyre MC"} &copy; {new Date().getFullYear()}
           </p>
         </div>
       </div>

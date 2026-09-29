@@ -12,7 +12,7 @@ export default function TermsPage() {
           <div className="flex items-center justify-between">
             <div>
               <h1 className="text-3xl font-bold">Termos de Uso</h1>
-              <p className="text-sm text-muted-foreground mt-1">Warden Shop</p>
+              <p className="text-sm text-muted-foreground mt-1">Zyre MC</p>
             </div>
             <Button variant="outline" onClick={() => navigate("/")}>
               Voltar
@@ -29,7 +29,7 @@ export default function TermsPage() {
             <section>
               <h2 className="text-xl font-bold mb-4">1. IDENTIFICAÇÃO</h2>
               <p className="text-muted-foreground mb-3">
-                A Warden Shop é uma loja virtual independente responsável pela comercialização de benefícios digitais utilizados exclusivamente no servidor Warden Craft.
+                A Zyre MC é uma loja virtual independente responsável pela comercialização de benefícios digitais utilizados exclusivamente no servidor Zyre MC.
               </p>
               <p className="text-muted-foreground">
                 Esta loja não possui qualquer vínculo, afiliação ou parceria com a Mojang Studios ou Microsoft.
@@ -180,7 +180,7 @@ export default function TermsPage() {
             <section>
               <h2 className="text-xl font-bold mb-4">11. PROPRIEDADE INTELECTUAL</h2>
               <p className="text-muted-foreground mb-3">
-                Todos os elementos do servidor e loja pertencem à equipe Warden Craft.
+                Todos os elementos do servidor e loja pertencem à equipe Zyre MC.
               </p>
               <p className="text-muted-foreground">
                 O uso indevido de conteúdo poderá resultar em medidas legais.
@@ -207,7 +207,7 @@ export default function TermsPage() {
             <section>
               <h2 className="text-xl font-bold mb-4">13. LIMITAÇÃO DE RESPONSABILIDADE</h2>
               <p className="text-muted-foreground mb-3">
-                A Warden Shop não se responsabiliza por:
+                A Zyre MC não se responsabiliza por:
               </p>
               <ul className="list-disc list-inside text-muted-foreground space-y-2">
                 <li>Perda de acesso à conta do jogador</li>
@@ -241,7 +241,7 @@ export default function TermsPage() {
             <section>
               <h2 className="text-xl font-bold mb-4">16. SUPORTE</h2>
               <p className="text-muted-foreground">
-                O suporte oficial é realizado exclusivamente via Discord do servidor Warden Craft.
+                O suporte oficial é realizado exclusivamente via Discord do servidor Zyre MC.
               </p>
             </section>
           </div>

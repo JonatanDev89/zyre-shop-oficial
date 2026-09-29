@@ -79,7 +79,7 @@ export async function createMpPreference(
       },
       auto_return: "approved",
       notification_url: `${baseUrl}/api/mp/webhook`,
-      statement_descriptor: "WARDEN SHOP",
+      statement_descriptor: "ZYRE MC",
       // Expira em 24h
       expires: true,
       expiration_date_from: new Date().toISOString(),
