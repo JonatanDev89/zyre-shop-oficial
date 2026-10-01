@@ -249,6 +249,16 @@ export default function AdminProducts() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const categoryId = Number(form.categoryId);
+    if (!Number.isInteger(categoryId) || categoryId <= 0) {
+      toast.error("Selecione uma categoria válida antes de salvar o produto.");
+      return;
+    }
+    const stock = Number(form.stock);
+    if (!Number.isInteger(stock) || stock < -1) {
+      toast.error("Informe um estoque válido. Use -1 para estoque ilimitado.");
+      return;
+    }
     const kitContentsJson = form.kitContents.trim()
       ? JSON.stringify(form.kitContents.split("\n").map((s) => s.trim()).filter(Boolean))
       : undefined;
@@ -265,12 +275,12 @@ export default function AdminProducts() {
     if (editingId) {
       updateProduct.mutate({
         id: editingId,
-        categoryId: parseInt(form.categoryId),
+        categoryId,
         name: form.name,
         description: form.description || undefined,
         kitContents: kitContentsJson,
         price: form.price,
-        stock: parseInt(form.stock),
+        stock,
         imageUrl,
         commands: commandsJson,
         active: form.active,
@@ -280,12 +290,12 @@ export default function AdminProducts() {
       });
     } else {
       createProduct.mutate({
-        categoryId: parseInt(form.categoryId),
+        categoryId,
         name: form.name,
         description: form.description || undefined,
         kitContents: kitContentsJson,
         price: form.price,
-        stock: parseInt(form.stock),
+        stock,
         imageUrl,
         commands: commandsJson,
         active: form.active,
